@@ -1,6 +1,5 @@
 package me.truec0der.ordinarywand;
 
-import me.truec0der.ordinarywand.init.ModEntities;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +23,7 @@ public class OrdinaryWand {
     public OrdinaryWand(IEventBus bus) {
         LanguageAdapter.registerMod(MOD_ID);
 
-        ModEntities.ENTITY_TYPES.register(bus);
+//        ModEntities.ENTITY_TYPES.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

@@ -1,7 +1,6 @@
 package me.truec0der.ordinarywand.init;
 
 import net.minecraft.world.item.Items;
-import net.minecraftforge.common.Tags;
 import org.zeith.hammerlib.annotations.ProvideRecipes;
 import org.zeith.hammerlib.api.IRecipeProvider;
 import org.zeith.hammerlib.event.recipe.RegisterRecipesEvent;

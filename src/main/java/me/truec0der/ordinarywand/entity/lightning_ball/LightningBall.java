@@ -2,7 +2,6 @@ package me.truec0der.ordinarywand.entity.lightning_ball;
 
 import me.truec0der.ordinarywand.init.ModItems;
 import me.truec0der.ordinarywand.util.ParticleUtil;
-import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;

@@ -1,0 +1,6 @@
+creative_tab.ordinarywand.root=Обычная Палка
+
+item.ordinarywand.ordinary_wand=Обычный Предмет
+item.ordinarywand.ordinary_wand.tooltip0=ПКМ чтобы призвать шаровую молнию
+item.ordinarywand.ordinary_wand.tooltip1=Шифт + ПКМ чтобы призвать лису :3
+item.ordinarywand.lightning_ball=Шаровая Молния

@@ -1,15 +1,11 @@
 {
-	"required": true,
-	"minVersion": "0.8.5",
-	"package": "me.truec0der.ordinarywand.mixins",
-	"refmap": "mixins.ordinarywand.refmap.json",
-	"target": "@env(DEFAULT)",
-	"compatibilityLevel": "JAVA_17",
-	"mixins": [
-		"ItemStackMixin"
-	],
-	"client": [
-	],
-	"server": [
-	]
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "me.truec0der.ordinarywand.mixin",
+  "refmap": "mixins.ordinarywand.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [],
+  "client": [],
+  "server": []
 }

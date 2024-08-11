@@ -86,7 +86,7 @@ public class LightningBall extends Projectile implements ItemSupplier {
             if (newMovement.lengthSqr() < speedThreshold * speedThreshold) {
                 ParticleUtil.spawnParticlesInRadius(
                         ParticleTypes.CLOUD,
-                        level,
+                        tickLevel,
                         this.blockPosition().getCenter(),
                         2,
                         50

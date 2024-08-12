@@ -17,7 +17,7 @@ public class ClientSetup {
 
     @SubscribeEvent
     public static void onRegisterRenderers(EntityRenderersEvent.RegisterRenderers event) {
-        event.registerEntityRenderer(ModEntities.LIGHTNING_BALL.entityType, LightningBallRenderer::new);
+        event.registerEntityRenderer(ModEntities.LIGHTNING_BALL, LightningBallRenderer::new);
     }
 
     @SubscribeEvent

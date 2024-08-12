@@ -59,10 +59,10 @@ public class WandItem extends AbstractItem {
     private InteractionResultHolder<ItemStack> spawnLightning(Level level, Player player, InteractionHand hand) {
         Vec3 playerLookVec = player.getLookAngle();
 
-        LightningBall lightningBall = new LightningBall(ModEntities.LIGHTNING_BALL.entityType, level);
+        LightningBall lightningBall = new LightningBall(ModEntities.LIGHTNING_BALL, level);
         lightningBall.setPos(player.getX(), player.getEyeY(), player.getZ());
 
-        lightningBall.shoot(playerLookVec.x, playerLookVec.y, playerLookVec.z, 1.5F, 2F);
+        lightningBall.shoot(playerLookVec.x, playerLookVec.y, playerLookVec.z, 1.0F, 1.5F);
 
         level.addFreshEntity(lightningBall);
 

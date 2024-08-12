@@ -19,7 +19,7 @@ public class LightningBallModel extends Model {
 
     public static LayerDefinition createLayer() {
         MeshDefinition meshdefinition = new MeshDefinition();
-        return LayerDefinition.create(meshdefinition, 8, 8);
+        return LayerDefinition.create(meshdefinition, 16, 16);
     }
 
     @Override

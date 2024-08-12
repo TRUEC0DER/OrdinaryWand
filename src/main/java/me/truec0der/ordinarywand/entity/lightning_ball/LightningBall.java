@@ -22,6 +22,7 @@ public class LightningBall extends Projectile implements ItemSupplier {
     public LightningBall(EntityType<? extends Projectile> type, Level level) {
         super(type, level);
         this.level = level;
+        this.clearFire();
     }
 
     @Override
@@ -39,7 +40,7 @@ public class LightningBall extends Projectile implements ItemSupplier {
         lightningBolt.setPos(location.x, location.y, location.z);
         level.addFreshEntity(lightningBolt);
 
-        this.remove(RemovalReason.KILLED);
+        remove();
     }
 
     @Override
@@ -69,7 +70,7 @@ public class LightningBall extends Projectile implements ItemSupplier {
 
             ProjectileUtil.rotateTowardsMovement(this, 0.2F);
 
-            float f = 0.95F;
+            float f = 0.25F;
             if (this.isInWater()) {
                 for (int i = 0; i < 4; ++i) {
                     tickLevel.addParticle(ParticleTypes.BUBBLE, d0 - vec3.x * 0.25D, d1 - vec3.y * 0.25D, d2 - vec3.z * 0.25D, vec3.x, vec3.y, vec3.z);
@@ -78,26 +79,36 @@ public class LightningBall extends Projectile implements ItemSupplier {
                 f = 0.8F;
             }
 
-            Vec3 newMovement = vec3.scale(f);
+            Vec3 newMovement = vec3.normalize().scale(f);
             this.setDeltaMovement(newMovement);
 
-            double speedThreshold = 0.40;
-            if (newMovement.lengthSqr() < speedThreshold * speedThreshold) {
+            double speedThreshold = 0.05;
+            if (!(newMovement.lengthSqr() < speedThreshold * speedThreshold)) {
                 ParticleUtil.spawnParticlesInRadius(
-                        ParticleTypes.CLOUD,
+                        ParticleTypes.ELECTRIC_SPARK,
                         tickLevel,
                         this.blockPosition().getCenter(),
-                        2,
-                        50
+                        0.5,
+                        10
                 );
-                this.discard();
-                return;
             }
 
             this.setPos(d0, d1, d2);
         } else {
-            this.discard();
+            remove();
         }
+    }
+
+    public void remove() {
+        ParticleUtil.spawnParticlesInRadius(
+                ParticleTypes.ASH,
+                level(),
+                this.blockPosition().getCenter(),
+                0.5,
+                15
+        );
+
+        this.remove(RemovalReason.DISCARDED);
     }
 
     @Override

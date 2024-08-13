@@ -4,3 +4,7 @@ item.ordinarywand.ordinary_wand=Ordinary Item
 item.ordinarywand.ordinary_wand.tooltip0=RMB to summon a lightning ball
 item.ordinarywand.ordinary_wand.tooltip1=Shift + RMB to summon a fox :3
 item.ordinarywand.lightning_ball=Lightning Ball
+
+block.ordinarywand.ordinary_power=Ordinary Power
+
+entity.ordinarywand.lightning_ball=Lightning Ball

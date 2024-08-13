@@ -30,10 +30,6 @@ public class LightningStrikeHandler {
 
         List<BlockPos> nearBlocks = BlockUtil.findBlocksInRadius(level, entityPos, 8, ModBlocks.ORDINARY_POWER);
         nearBlocks.forEach(blockPos -> {
-            int distance = (int) Math.sqrt(entityPos.distSqr(blockPos));
-
-            int finalEnergy = maxEnergy / (distance == 0 ? 1 : distance);
-
             BlockState blockState = level.getBlockState(blockPos);
 
             boolean isValidBlock = ModTiles.ORDINARY_POWER.isValid(blockState);
@@ -42,12 +38,13 @@ public class LightningStrikeHandler {
             OrdinaryPowerTile blockEntity = (OrdinaryPowerTile) level.getBlockEntity(blockPos);
             if (blockEntity == null) return;
 
+            int distance = (int) Math.sqrt(entityPos.distSqr(blockPos));
+            int finalEnergy = maxEnergy / (distance == 0 ? 1 : distance);
+
             blockEntity.addEnergy(finalEnergy);
 
             BlockState newState = level.getBlockState(blockPos);
             level.sendBlockUpdated(blockPos, newState, newState, 3);
-
-            System.out.println(blockEntity.getEnergy());
         });
     }
 }

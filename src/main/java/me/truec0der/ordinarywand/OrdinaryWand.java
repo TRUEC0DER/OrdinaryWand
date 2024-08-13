@@ -23,7 +23,6 @@ public class OrdinaryWand {
     public OrdinaryWand(IEventBus bus) {
         LanguageAdapter.registerMod(MOD_ID);
 
-//        ModEntities.ENTITY_TYPES.register(bus);
         MinecraftForge.EVENT_BUS.register(this);
     }
 

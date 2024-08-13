@@ -1,7 +1,6 @@
 package me.truec0der.ordinarywand.client;
 
 import me.truec0der.ordinarywand.OrdinaryWand;
-import me.truec0der.ordinarywand.entity.lightning_ball.LightningBall;
 import me.truec0der.ordinarywand.entity.lightning_ball.LightningBallModel;
 import me.truec0der.ordinarywand.entity.lightning_ball.LightningBallRenderer;
 import me.truec0der.ordinarywand.init.ModEntities;

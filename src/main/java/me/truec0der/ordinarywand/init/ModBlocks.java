@@ -9,9 +9,10 @@ import org.zeith.hammerlib.annotations.SimplyRegister;
 @SimplyRegister
 public interface ModBlocks {
     @RegistryName("ordinary_power")
-    OrdinaryPowerBlock ORDINARY_POWER = new OrdinaryPowerBlock(BlockBehaviour.Properties.of()
-            .sound(SoundType.METAL)
-            .strength(4F)
-            .requiresCorrectToolForDrops()
+    OrdinaryPowerBlock ORDINARY_POWER = new OrdinaryPowerBlock(
+            BlockBehaviour.Properties.of()
+                    .sound(SoundType.METAL)
+                    .strength(4F)
+                    .requiresCorrectToolForDrops()
     );
 }

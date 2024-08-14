@@ -1,8 +1,10 @@
 package me.truec0der.ordinarywand.tile;
 
 import me.truec0der.ordinarywand.init.ModTiles;
+import me.truec0der.ordinarywand.util.ParticleUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
@@ -33,6 +35,14 @@ public class OrdinaryPowerTile extends TileSyncableTickable implements IEnergySt
     @Override
     public void update() {
         ticker.tick(level);
+
+        ParticleUtil.spawnParticlesInRadius(
+                ParticleTypes.CLOUD,
+                level,
+                getBlockPos().getCenter().add(0, 1, 0),
+                0.5,
+                1
+        );
     }
 
     @Override
@@ -44,6 +54,7 @@ public class OrdinaryPowerTile extends TileSyncableTickable implements IEnergySt
         if (!level.isClientSide) {
             distributeEnergy();
         }
+
         level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
     }
 

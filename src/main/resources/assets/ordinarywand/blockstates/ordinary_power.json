@@ -1,7 +1,5 @@
 {
-  "variants": {
-    "normal": {
-      "model": "ordinarywand:block/ordinary_power"
-    }
+  "variants":{
+    "": { "model":"ordinarywand:block/ordinary_power" }
   }
 }

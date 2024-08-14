@@ -35,14 +35,6 @@ public class OrdinaryPowerTile extends TileSyncableTickable implements IEnergySt
     @Override
     public void update() {
         ticker.tick(level);
-
-        ParticleUtil.spawnParticlesInRadius(
-                ParticleTypes.CLOUD,
-                level,
-                getBlockPos().getCenter().add(0, 1, 0),
-                0.5,
-                1
-        );
     }
 
     @Override
@@ -56,6 +48,17 @@ public class OrdinaryPowerTile extends TileSyncableTickable implements IEnergySt
         }
 
         level.updateNeighbourForOutputSignal(worldPosition, getBlockState().getBlock());
+        level.sendBlockUpdated(worldPosition, getBlockState(), getBlockState(), 3);
+
+        if (getEnergyStored() > 0) {
+            ParticleUtil.spawnParticlesInRadius(
+                    ParticleTypes.CLOUD,
+                    level,
+                    worldPosition.getCenter().add(0, 1, 0),
+                    0.5,
+                    1
+            );
+        }
     }
 
     private void distributeEnergy() {

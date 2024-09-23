@@ -1,6 +1,6 @@
 package me.truec0der.ordinarywand.init;
 
-import me.truec0der.ordinarywand.tile.OrdinaryPowerTile;
+import me.truec0der.ordinarywand.content.tile.OrdinaryPowerTile;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import org.zeith.hammerlib.annotations.RegistryName;
 import org.zeith.hammerlib.annotations.SimplyRegister;

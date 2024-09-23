@@ -1,6 +1,6 @@
-package me.truec0der.ordinarywand.item;
+package me.truec0der.ordinarywand.content.item;
 
-import me.truec0der.ordinarywand.entity.lightning_ball.LightningBall;
+import me.truec0der.ordinarywand.content.entity.LightningBallEntity;
 import me.truec0der.ordinarywand.init.ModEntities;
 import me.truec0der.ordinarywand.util.ParticleUtil;
 import me.truec0der.ordinarywand.util.VectorUtil;
@@ -20,7 +20,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class WandItem extends AbstractItem {
+public class WandItem extends BaseItem {
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, Player player, @NotNull InteractionHand hand) {
         if (player.isShiftKeyDown()) return spawnFox(level, player, hand);
@@ -59,7 +59,7 @@ public class WandItem extends AbstractItem {
     private InteractionResultHolder<ItemStack> spawnLightning(Level level, Player player, InteractionHand hand) {
         Vec3 playerLookVec = player.getLookAngle();
 
-        LightningBall lightningBall = new LightningBall(ModEntities.LIGHTNING_BALL, level);
+        LightningBallEntity lightningBall = new LightningBallEntity(ModEntities.LIGHTNING_BALL, level);
         lightningBall.setPos(player.getX(), player.getEyeY(), player.getZ());
 
         lightningBall.shoot(playerLookVec.x, playerLookVec.y, playerLookVec.z, 1.0F, 1.5F);

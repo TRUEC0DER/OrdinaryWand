@@ -1,4 +1,4 @@
-package me.truec0der.ordinarywand.entity.lightning_ball;
+package me.truec0der.ordinarywand.content.entity;
 
 import me.truec0der.ordinarywand.init.ModItems;
 import me.truec0der.ordinarywand.util.ParticleUtil;
@@ -16,10 +16,10 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
-public class LightningBall extends Projectile implements ItemSupplier {
+public class LightningBallEntity extends Projectile implements ItemSupplier {
     Level level;
 
-    public LightningBall(EntityType<? extends Projectile> type, Level level) {
+    public LightningBallEntity(EntityType<? extends Projectile> type, Level level) {
         super(type, level);
         this.level = level;
         this.clearFire();

@@ -1,4 +1,4 @@
-package me.truec0der.ordinarywand.entity.lightning_ball;
+package me.truec0der.ordinarywand.client.model;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;

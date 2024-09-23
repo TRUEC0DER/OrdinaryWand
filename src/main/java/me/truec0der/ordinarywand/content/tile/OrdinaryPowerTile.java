@@ -1,4 +1,4 @@
-package me.truec0der.ordinarywand.tile;
+package me.truec0der.ordinarywand.content.tile;
 
 import me.truec0der.ordinarywand.init.ModTiles;
 import me.truec0der.ordinarywand.util.ParticleUtil;

@@ -3,7 +3,7 @@ package me.truec0der.ordinarywand.event;
 import me.truec0der.ordinarywand.OrdinaryWand;
 import me.truec0der.ordinarywand.init.ModBlocks;
 import me.truec0der.ordinarywand.init.ModTiles;
-import me.truec0der.ordinarywand.tile.OrdinaryPowerTile;
+import me.truec0der.ordinarywand.content.tile.OrdinaryPowerTile;
 import me.truec0der.ordinarywand.util.BlockUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;

@@ -1,7 +1,7 @@
-package me.truec0der.ordinarywand.block.ordinary_power;
+package me.truec0der.ordinarywand.content.block;
 
 import me.truec0der.ordinarywand.OrdinaryWand;
-import me.truec0der.ordinarywand.tile.OrdinaryPowerTile;
+import me.truec0der.ordinarywand.content.tile.OrdinaryPowerTile;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.level.Level;
